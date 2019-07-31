@@ -1,0 +1,50 @@
+配置文件中需要配置哪些信息：
+            可以这样找，在搜索框中输入*Properties即可，
+            前缀＋属性即可进行配置。
+
+我们可以通过启用debug=true属性，来让控制台打印自动配置报告，这样我们就可以方便的知道哪些自动配置
+类生效。
+
+SpringBoot能自动配置适配所有的日志，而且底层使用slf4j+logback的方式记录日志，引入其他框架
+的时候，只需要把这个框架依赖的日志框架排除掉；
+
+
+
+
+日志框架：
+        Slf4j日志抽象层到其logback的实现层
+如何让系统中所有的日志都统一到Slf4j
+1.将系统中其他日志框架先排除出去
+2.用中间包来替换原有的日志框架
+3.我们导入上slf4j其他的实现。
+
+
+在项目中如何直接进入到项目存放的齿盘位置：点击项目右键选择show in Expore
+
+日志默认只是打印在控制台上，如果需要设置配置在yml文件中即可:
+
+日志的格式：
+    %d表示的时间
+    %thread表示线程的名
+    %-5level：级别从左显示5个字符宽度
+    %logger{50} 表示logger名字最长50个字符，否则按照句号分割
+    %msg：日志消息
+    %n是换行符
+
+指定配置文件：
+        给类路径下放上每个日志框架自己的配置文件即可；SpringBoot就不使用他默认配置的了。
+        Logging System                     Customization
+        Logback                            logback-spring.xml  logback.xml
+
+
+        loback.xml:直接就被日志框架识别了；
+        loback-spring.xml:日志框架就不直接加载日志的配置项，由SpringBoot解析日志配置，可以使用
+        SpringBoot的高级Profile功能。
+        <springProfile name="staging">
+                可以指定某段配置只在某个环境下生效
+        </springProfile>
+
+切换日志框架-----不推荐
+
+    可以按照slf4j的日志适配图，进行相关的切换；----首先在依赖的适配图中排除两个依赖
+    slf4j+log4j的方式;====然后再依赖中加入slf4j转为log4j的依赖即可。

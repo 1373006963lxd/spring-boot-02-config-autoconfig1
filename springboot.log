@@ -1,0 +1,11 @@
+2019-07-31 10:23:20.986  INFO 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : Starting SpringBoot02ConfigAutoconfigApplicationTests on PC-201608021440 with PID 6148 (started by Administrator in E:\JavaIDEA\spring-boot-02-config-autoconfig1)
+2019-07-31 10:23:20.988 DEBUG 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 10:23:20.989  INFO 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : No active profile set, falling back to default profiles: default
+2019-07-31 10:23:25.208  INFO 6148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 10:23:25.905  INFO 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : Started SpringBoot02ConfigAutoconfigApplicationTests in 6.021 seconds (JVM running for 8.257)
+2019-07-31 10:23:26.689 TRACE 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : 这是trace日志
+2019-07-31 10:23:26.690 DEBUG 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : 这是debug日志
+2019-07-31 10:23:26.690  INFO 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : 这是info日志
+2019-07-31 10:23:26.691  WARN 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : 这是warn日志
+2019-07-31 10:23:26.691 ERROR 6148 --- [main] ngBoot02ConfigAutoconfigApplicationTests : 这是error日志
+2019-07-31 10:23:26.705  INFO 6148 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
